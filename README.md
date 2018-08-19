@@ -1,7 +1,7 @@
 # rest-spring-boot
 
 ## Introduction
-This project was made to tide up a bunch of back-end skills using Java, Rest, MVC, Spring, OOP, TDD, Persistence Data and custom HTTP message status.
+This project was made to tide up a bunch of back-end skills using Java, Rest, MVC, Spring, OOP, TDD, Persistence Data and custom HTTP message response.
 
 For deeper technical look about the code, check out at the end of this page.
 
