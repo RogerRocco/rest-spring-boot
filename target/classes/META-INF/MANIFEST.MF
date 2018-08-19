@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: contaazul-desafio-spring-boot-1
+Implementation-Version: 0.0.1
+Built-By: rokobarret
+Implementation-Vendor-Id: br.com.contaazul
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/desafio
+Created-By: Maven Integration for Eclipse
+
