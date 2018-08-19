@@ -1,11 +1,16 @@
 # rest-spring-boot
 
 ## Introduction
-This project was made to tide up a bunch of back-end skills using Java, Rest, MVC, Spring, OOP, TDD and Persistence Data. For deeper technical look about the code, check out at the end of this page.
+This project was made to tide up a bunch of back-end skills using Java, Rest, MVC, Spring, OOP, TDD, Persistence Data and custom HTTP message status.
+
+For deeper technical look about the code, check out at the end of this page.
 
 ## Summary
-This is a Restful Project that works giving support for bank lip payment. 
-Also, calculate the fee depending on the due date for debt.    
+
+This is a Restful Project that works giving support for bank lip payment, in a web environment with custom HTTP message output when HTTP requested.
+
+Also, calculate the fee depending on the due date for payment.    
+
 
 ## Requirements
 
@@ -24,20 +29,29 @@ Also, calculate the fee depending on the due date for debt.
 This project is ready to use. You just need to clone and import in Eclipse IDE.
 
 ## How to use
-To create new bank slip (using POST)
-
+### Create new bank slip (using POST)
 	localhost:8080/rest/bankslips
-To get all bank slips (using GET)
->
+Custom header response messages:
+- 201- Bankslip created
+- 422 - A field of the provided bankslip was null or with invalid values
+- 400 - Bankslip not provided in the request body
+ 
+### Get all bank slips (using GET)
 	localhost:8080/rest/bankslips
-
-To get one specific bank slip by id (using GET)
->
+Custom header response messages:
+- 200 - OK (standard response)
+- 404 - No Bankslips was found
+### Get one specific bank slip by id (using GET)
 	localhost:8080/rest/bankslips/{id}
-Change the bank slip payment status to "PAID" or "CANCELED" (using PUT)
->
+Custom header response messages:
+- 200 - OK (standard response)
+- 404 - Bankslip not found with the specified id
+### Change the bank slip payment status to "PAID" or "CANCELED" (using PUT)
 	localhost:8080/rest/bankslips
-
+Custom header response messages:,
+- 200- Bankslip cancelled
+- 200- Bankslip paid
+- 404 - Bankslip not modified. The status is the same or ID of link does not corresponding the ID of body or Status was invalid
 ## Valid JSON Structures
 
 Full json structure:
